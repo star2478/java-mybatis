@@ -14,4 +14,24 @@
         resultType="com.pingan.java_mybatis.User">
         select * from test_user where id=#{id}
     </select>
+    
+    <insert id="addUser" parameterType="com.pingan.java_mybatis.User">
+         insert into test_user(id, name, age) values(test_user_sequence.nextval, #{name}, #{age})
+     </insert>
+     
+     <!-- 删除用户(Remove) -->
+     <delete id="deleteUser" parameterType="int">
+         delete from test_user where id=#{id}
+     </delete>
+     
+     <!-- 修改用户(Update) -->
+     <update id="updateUser" parameterType="com.pingan.java_mybatis.User">
+         update test_user set name=#{name},age=#{age} where id=#{id}
+     </update>
+     
+     <!-- 查询全部用户-->
+     <select id="getAllUsers" resultType="com.pingan.java_mybatis.User">
+         select * from test_user order by id
+     </select>
+
 </mapper>

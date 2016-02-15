@@ -17,7 +17,8 @@
     <mappers>
          <!-- 注册userMapper.xml文件 -->
          <mapper resource="com/pingan/java_mybatis/userMapper.xml"/>
-         <!-- <mapper resource="userMapper.xml"/> -->
+         <!-- 注册UserMapper映射接口-->
+         <mapper class="com.pingan.java_mybatis.UserMapperInterface"/>
     </mappers>
     
 </configuration>
